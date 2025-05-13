@@ -1,3 +1,4 @@
+
 import { clx } from "./utils/clx";
 
 const ListItem = ({
@@ -62,6 +63,22 @@ const SectionPanel = ({
   );
 };
 
+const Section = ({ title, subTitle, children }: { title: string; subTitle: string; children?: React.ReactNode }) => {
+  return (
+    <div className="flex flex-col bg-white p-6 rounded-lg shadow-2xl">
+      <div className="flex">
+        <div className="flex flex-col">
+          <h1 className="text-2xl font-bold">{title}</h1>
+          <p className="text-sm text-gray-400">
+            {subTitle}
+          </p>
+        </div>
+      </div>
+      {children}
+    </div>
+  );
+};
+
 function App() {
   return (
     <>
@@ -108,7 +125,34 @@ function App() {
               value="7"
             />
           </div>
-          <div className="flex bg-white p-10 rounded-lg shadow-2xl justify-around"></div>
+          <div className="flex w-full gap-4">
+            <div className="flex flex-col gap-4 rounded-lg justify-around grow max-w-4/5">
+              <div className="flex bg-white p-6 rounded-lg shadow-2xl">
+                <div className="flex">
+                  <div className="flex flex-col">
+                    <h1 className="text-2xl font-bold">Dashboard</h1>
+                    <p className="text-sm text-gray-400">
+                      Información detallada de tu tienda
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <Section title="Productos" subTitle="Listado de productos">
+                
+              </Section>
+              
+            </div>
+            <div className="flex flex-col bg-white p-6 rounded-lg shadow-2xl justify-around grow max-w-1/5">
+              <div className="flex">
+                <div className="flex flex-col">
+                  <h1 className="text-2xl font-bold">Dashboard</h1>
+                  <p className="text-sm text-gray-400">
+                    Información detallada de tu tienda
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </main>
       </div>
     </>
