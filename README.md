@@ -38,3 +38,9 @@ Finalmente, abra su navegador y acceda a:
 ```
 http://localhost:5173/
 ```
+
+## Preview
+
+https://github.com/user-attachments/assets/77ee0ec4-3a8e-4e94-bb1c-bf4902ab7219
+
+
